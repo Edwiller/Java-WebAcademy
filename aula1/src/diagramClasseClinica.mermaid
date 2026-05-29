@@ -1,0 +1,21 @@
+classDiagram
+
+class Paciente {
+    Id: Long
+    nome: String
+    email: String
+    telefone: String
+    dataNascimento: Date
+    grupoSanguineo: String
+    sexo: String
+    cep: String
+    endereco: String
+    cidade: String
+    estado: String
+}
+
+class Atendimento {
+    id: Long
+}
+
+Paciente --> Atendimento : Paciente

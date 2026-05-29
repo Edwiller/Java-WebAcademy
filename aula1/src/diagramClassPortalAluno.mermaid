@@ -1,0 +1,58 @@
+classDiagram
+
+class Aluno {
+    CPF: Varchar
+    Senha: Varchar
+    Matricula: Varchar
+}
+
+class Emprestimo {
+    Código: Int
+    Data Emp: Date
+    Vencimento: Date
+    Status: Bool
+}
+
+class Livro {
+    Autor: Varchar
+    Título: Varchar
+}
+
+class Reservas {
+    Livro: String
+    Data_Solicitação: Datetime
+    Posição_Fila: Int
+    Status: Bool
+}
+
+class Historico {
+    Código: Int
+    Data_Emp: Datetime
+    Data_Dev: Datetime
+    Status: Bool
+}
+
+class Cartao {
+    Número_Cartão: Int
+    Nome_Titual: Varchar
+    Validade: Date
+    CVV: Int
+}
+
+class Disciplina {
+    Horário: Datetime
+    Professor: Varchar
+    Sala: Varchar
+}
+
+Aluno --> Emprestimo 
+
+Reservas --> Emprestimo
+
+Livro --> Emprestimo
+
+Aluno --> Disciplina
+
+Aluno --> Cartao
+
+Historico --> Emprestimo : Reservar
